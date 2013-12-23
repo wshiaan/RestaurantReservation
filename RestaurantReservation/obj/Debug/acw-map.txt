@@ -1,0 +1,4 @@
+RestaurantReservation.Details;restaurantreservation.Details
+RestaurantReservation.Main;restaurantreservation.Main
+RestaurantReservation.Search;restaurantreservation.Search
+RestaurantReservation.UserDetails;restaurantreservation.UserDetails

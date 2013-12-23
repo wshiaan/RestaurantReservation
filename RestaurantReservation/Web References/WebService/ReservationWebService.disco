@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://pbf93y1.sw.sherwin.com/ReservationWebService/ReservationWebService.asmx?wsdl" docRef="http://pbf93y1.sw.sherwin.com/ReservationWebService/ReservationWebService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://pbf93y1.sw.sherwin.com/ReservationWebService/ReservationWebService.asmx" xmlns:q1="http://tempuri.org/" binding="q1:ReservationWebServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://pbf93y1.sw.sherwin.com/ReservationWebService/ReservationWebService.asmx" xmlns:q2="http://tempuri.org/" binding="q2:ReservationWebServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>
