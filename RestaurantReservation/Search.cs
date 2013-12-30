@@ -53,17 +53,74 @@ namespace RestaurantReservation
             // add spinner here
             TablenumSpinner();
 
-            //Change book time button, link back to Details page
-            var changeposButton = FindViewById(Resource.Id.changeposButton);
-            changeposButton.Click += (sender, e) =>
+            //Menu button
+            var menuButton = FindViewById(Resource.Id.menuButton);
+            menuButton.Click += delegate(object sender, EventArgs e)
             {
-                var details = new Intent(this, typeof(Details));
-
-                StartActivity(details);
-
+                switch (resid)
+                {
+                    case 1:
+                        {
+                            var coffeeshop = new Intent(this, typeof(Coffeeshop));
+                            StartActivity(coffeeshop);
+                            return;
+                        }
+                    case 2:
+                        {
+                            var hansells = new Intent(this, typeof(Hansellskitchen));
+                            StartActivity(hansells);
+                            return;
+                        }
+                    case 3:
+                        {
+                            var andy = new Intent(this, typeof(Andysteakhouse));
+                            StartActivity(andy);
+                            return;
+                        }
+                    case 4:
+                        {
+                            var maple = new Intent(this, typeof(Maplepalace));
+                            StartActivity(maple);
+                            return;
+                        }
+                    case 5:
+                        {
+                            var garden = new Intent(this, typeof(Restaurantgarden));
+                            StartActivity(garden);
+                            return;
+                        }
+                    case 6:
+                        {
+                            var bbq = new Intent(this, typeof(RestaurantBBQ));
+                            StartActivity(bbq);
+                            return;
+                        }
+                }
 
             };
 
+            //Next button to link to UserDetails page
+            var nextButton = FindViewById(Resource.Id.nextButton);
+
+            nextButton.Click += delegate(object sender, EventArgs e)
+            {
+                if (!error)
+                {
+                    var userdetails = new Intent(this, typeof(UserDetails));
+                    userdetails.PutExtra("bookstart", bookStart.Text);
+                    userdetails.PutExtra("bookend", bookEnd.Text);
+                    userdetails.PutExtra("headcount", headcount.Text);
+                    userdetails.PutExtra("tableid", tableID);
+                    userdetails.PutExtra("tablenum", tablenum);
+                    StartActivity(userdetails);
+                }
+                else
+                {
+                    errormsg = "No table available for this headcount. Please reselect headcount to proceed.";
+                    //Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                    CommonMethod.displayToast(ApplicationContext, errormsg);
+                }
+            };
             //Floor plan button to view the floor plan
             var floorplan = FindViewById(Resource.Id.floorplan);
             switch (resid)
@@ -115,27 +172,7 @@ namespace RestaurantReservation
                     }
             }
 
-            //Next button to link to UserDetails page
-            var nextButton = FindViewById(Resource.Id.nextButton);
 
-            nextButton.Click += (sender, e) =>
-            {
-                if (!error)
-                {
-                    var userdetails = new Intent(this, typeof(UserDetails));
-                    userdetails.PutExtra("bookstart", bookStart.Text);
-                    userdetails.PutExtra("bookend", bookEnd.Text);
-                    userdetails.PutExtra("headcount", headcount.Text);
-                    userdetails.PutExtra("tableid", tableID);
-                    userdetails.PutExtra("tablenum", tablenum);
-                    StartActivity(userdetails);
-                }
-                else
-                {
-                    errormsg = "No table available for this headcount. Please reselect headcount to proceed.";
-                    Toast.MakeText(this, errormsg, ToastLength.Long).Show();
-                }
-            };
 
 
         }
@@ -157,7 +194,8 @@ namespace RestaurantReservation
             if (tablenumber.Count() == 0)
             {
                 errormsg = "No table available for this headcount.";
-                Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                //Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                CommonMethod.displayToast(ApplicationContext, errormsg);
                 error = true;
             }
             else

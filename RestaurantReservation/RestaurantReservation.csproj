@@ -50,10 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Andysteakhouse.cs" />
+    <Compile Include="Coffeeshop.cs" />
+    <Compile Include="CommonMethod.cs" />
     <Compile Include="Details.cs" />
+    <Compile Include="Hansellskitchen.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="Maplepalace.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestaurantBBQ.cs" />
+    <Compile Include="Restaurantgarden.cs" />
     <Compile Include="Search.cs" />
     <Compile Include="UserDetails.cs" />
     <Compile Include="Web References\WebService\Reference.cs">
@@ -72,6 +79,27 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\Details.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\toast_layout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\coffeeshop.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\hansells.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\andysteakhouse.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\restaurantgarden.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\restaurantbbq.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\maple.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <None Include="Web References\WebService\Reference.map">
@@ -104,10 +132,21 @@
     <AndroidResource Include="Resources\Drawable\MaplePalace.jpg" />
     <AndroidResource Include="Resources\Drawable\OsakaSushi.jpg" />
     <AndroidResource Include="Resources\Drawable\RestaurantGarden.jpg" />
-    <AndroidResource Include="Resources\Values\styles.xml" />
-    <AndroidResource Include="Resources\Drawable\button.xml" />
-    <AndroidResource Include="Resources\Values\text_style.xml" />
-    <AndroidResource Include="Resources\Drawable\Spinner.xml" />
+    <AndroidResource Include="Resources\Values\styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Drawable\button.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Values\text_style.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Drawable\coffeeshop_menu.jpg" />
+    <AndroidResource Include="Resources\Drawable\Hansells.jpg" />
+    <AndroidResource Include="Resources\Drawable\maple_menu.jpg" />
+    <AndroidResource Include="Resources\Drawable\garden_menu.jpg" />
+    <AndroidResource Include="Resources\Drawable\andysteak.jpg" />
+    <AndroidResource Include="Resources\Drawable\RestaurantBBQ.png" />
     <None Include="Web References\WebService\ReservationWebService.disco" />
   </ItemGroup>
   <ItemGroup>

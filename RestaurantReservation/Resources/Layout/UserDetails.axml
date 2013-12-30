@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="#FFEBCC">
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="fill_parent"
@@ -16,61 +17,67 @@
                 android:id="@+id/bookStartView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Book Start Date and Time:" />
+                android:text="Book Start Date and Time:"
+                style="@style/Textview_text" />
             <TextView
                 android:id="@+id/bookStart"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:text=""
+                style="@style/Display_text" />
             <TextView
                 android:id="@+id/bookEndView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Book End Date and Time:" />
+                android:text="Book End Date and Time:"
+                style="@style/Textview_text" />
             <TextView
                 android:id="@+id/bookEnd"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:text=""
+                style="@style/Display_text" />
             <TextView
                 android:id="@+id/headcountView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Headcount:" />
+                android:text="Headcount:"
+                style="@style/Textview_text" />
             <TextView
                 android:id="@+id/headcount"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:text=""
+                style="@style/Display_text" />
             <TextView
                 android:id="@+id/tablenumView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Table No:" />
+                android:text="Table No:"
+                style="@style/Textview_text" />
             <TextView
                 android:id="@+id/tablenum"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
-            <TextView
-                android:id="@+id/positionView"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Position:" />
+                android:text=""
+                style="@style/Display_text" />
             <TextView
                 android:id="@+id/position"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:text=""
+                style="@style/Display_text" />
             <TextView
                 android:id="@+id/name"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Name:" />
+                android:text="Name:"
+                style="@style/Textview_text" />
             <TextView
                 android:id="@+id/editnameView"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                style="@style/Display_text" />
             <EditText
                 android:id="@+id/editName"
                 android:layout_width="fill_parent"
@@ -79,11 +86,13 @@
                 android:id="@+id/phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Phone No:" />
+                android:text="Phone No:"
+                style="@style/Textview_text" />
             <TextView
                 android:id="@+id/editphoneView"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                style="@style/Display_text" />
             <EditText
                 android:id="@+id/editPhone"
                 android:layout_width="fill_parent"
@@ -92,11 +101,13 @@
                 android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email:" />
+                android:text="Email:"
+                style="@style/Textview_text" />
             <TextView
                 android:id="@+id/editemailView"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                style="@style/Display_text" />
             <EditText
                 android:id="@+id/editEmail"
                 android:layout_width="fill_parent"
@@ -105,12 +116,9 @@
                 android:id="@+id/confirmButton"
                 android:layout_width="100px"
                 android:layout_height="wrap_content"
-                android:text="Confirm" />
-            <Button
-                android:id="@+id/backButton"
-                android:layout_width="100px"
-                android:layout_height="wrap_content"
-                android:text="Back" />
+                android:text="Confirm"
+                android:background="@drawable/button"
+                style="@style/button_text" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

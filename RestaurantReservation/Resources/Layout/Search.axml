@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="#FFEBCC">
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="fill_parent"
@@ -16,61 +17,76 @@
                 android:id="@+id/bookStartView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Book Date and Start Time:" />
+                android:text="Book Date and Start Time:"
+                style="@style/Textview_text" />
             <TextView
                 android:id="@+id/bookStart"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:text=""
+                style="@style/Display_text" />
             <TextView
                 android:id="@+id/bookEndView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Book Date and End Time:" />
+                android:text="Book Date and End Time:"
+                style="@style/Textview_text" />
             <TextView
                 android:id="@+id/bookEnd"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:text=""
+                style="@style/Display_text" />
             <TextView
                 android:id="@+id/headcountView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Headcount:" />
+                android:text="Headcount:"
+                style="@style/Textview_text" />
             <TextView
                 android:id="@+id/headcount"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:text=""
+                style="@style/Display_text" />
             <TextView
                 android:id="@+id/tableNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Table No. Available:" />
+                android:text="Table No. Available:"
+                style="@style/Textview_text" />
             <Spinner
                 android:id="@+id/tablenumSpinner"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="25px"
+                style="@style/Display_text"
+                android:background="#E68A00"
+                android:popupBackground="#000000" />
             <TextView
                 android:id="@+id/floorplan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Floor Plan: " />
+                android:text="Floor Plan: "
+                style="@style/Textview_text" />
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:id="@+id/demoImageView"
                 android:scaleType="fitXY" />
             <Button
-                android:id="@+id/changeposButton"
-                android:layout_width="wrap_content"
+                android:id="@+id/menuButton"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Change Booking Time" />
+                android:text="Menu"
+                android:background="@drawable/button"
+                style="@style/button_text" />
             <Button
                 android:id="@+id/nextButton"
-                android:layout_width="100px"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Next" />
+                android:text="Next"
+                android:background="@drawable/button"
+                style="@style/button_text" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

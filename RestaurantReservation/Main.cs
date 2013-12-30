@@ -28,16 +28,24 @@ namespace RestaurantReservation
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            try
+            {
+                // Set our view from the "main" layout resource
+                var layout = new LinearLayout(this);
+                layout.Orientation = Orientation.Vertical;
 
-            // Set our view from the "main" layout resource
-            var layout = new LinearLayout(this);
-            layout.Orientation = Orientation.Vertical;
 
-            //Display restaurant list
-            var selectrest = FindViewById(Resource.Id.selectrest);
-            var rlistview = FindViewById(Resource.Id.List);
-            //rlist = new string[] { "Vegetables", "Fruits", "Flower Buds", "Legumes", "Bulbs", "Tubers" };
+                //Display restaurant list
+                var selectrest = FindViewById(Resource.Id.selectrest);
 
+                var rlistview = FindViewById(Resource.Id.List);
+
+                // View v = FindViewById(Resource.Layout.Main);
+                //v.SetBackgroundColor(Android.Graphics.Color.White);
+            }
+            catch (Exception ex)
+            {
+            }
             rlist = reservationWebService.GetRestaurantName();
             for (int i = 0; i < rlist.Count; i++)
             {
@@ -48,6 +56,8 @@ namespace RestaurantReservation
             ListAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, reslist);
 
 
+
+
         }
 
         // Choose a restaurant and link to Details page
@@ -55,6 +65,7 @@ namespace RestaurantReservation
         {
             var details = new Intent(this, typeof(Details));
             details.PutExtra("resid", rlist[position].Resid.ToString());
+            // v.SetBackgroundColor(Android.Graphics.Color.White);
             StartActivity(details);
         }
 

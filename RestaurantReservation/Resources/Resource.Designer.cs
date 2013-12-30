@@ -61,34 +61,49 @@ namespace RestaurantReservation
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int AndySteakHouse = 2130837504;
+			public const int andysteak = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int button = 2130837505;
+			public const int AndySteakHouse = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int coffeeshop = 2130837506;
+			public const int button = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int HansellsKitchen2 = 2130837507;
+			public const int coffeeshop = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int Icon = 2130837508;
+			public const int coffeeshop_menu = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int MaplePalace = 2130837509;
+			public const int garden_menu = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int monoandroidsplash = 2130837510;
+			public const int Hansells = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int OsakaSushi = 2130837511;
+			public const int HansellsKitchen2 = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int RestaurantGarden = 2130837512;
+			public const int Icon = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int Spinner = 2130837513;
+			public const int maple_menu = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int MaplePalace = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int monoandroidsplash = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int OsakaSushi = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int RestaurantBBQ = 2130837517;
+			
+			// aapt resource value: 0x7f02000e
+			public const int RestaurantGarden = 2130837518;
 			
 			static Drawable()
 			{
@@ -103,137 +118,158 @@ namespace RestaurantReservation
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070011
-			public const int List = 2131165201;
-			
-			// aapt resource value: 0x7f07002b
-			public const int backButton = 2131165227;
-			
-			// aapt resource value: 0x7f070015
-			public const int bookEnd = 2131165205;
-			
 			// aapt resource value: 0x7f070014
-			public const int bookEndView = 2131165204;
-			
-			// aapt resource value: 0x7f070013
-			public const int bookStart = 2131165203;
-			
-			// aapt resource value: 0x7f070012
-			public const int bookStartView = 2131165202;
-			
-			// aapt resource value: 0x7f07001b
-			public const int changeposButton = 2131165211;
-			
-			// aapt resource value: 0x7f07002a
-			public const int confirmButton = 2131165226;
-			
-			// aapt resource value: 0x7f070001
-			public const int container = 2131165185;
-			
-			// aapt resource value: 0x7f070003
-			public const int dateDisplay = 2131165187;
-			
-			// aapt resource value: 0x7f070002
-			public const int dateText = 2131165186;
-			
-			// aapt resource value: 0x7f07000e
-			public const int demoImageView = 2131165198;
-			
-			// aapt resource value: 0x7f070029
-			public const int editEmail = 2131165225;
-			
-			// aapt resource value: 0x7f070023
-			public const int editName = 2131165219;
-			
-			// aapt resource value: 0x7f070026
-			public const int editPhone = 2131165222;
-			
-			// aapt resource value: 0x7f070028
-			public const int editemailView = 2131165224;
-			
-			// aapt resource value: 0x7f070022
-			public const int editnameView = 2131165218;
-			
-			// aapt resource value: 0x7f070025
-			public const int editphoneView = 2131165221;
-			
-			// aapt resource value: 0x7f070027
-			public const int email = 2131165223;
-			
-			// aapt resource value: 0x7f070009
-			public const int endtimeDisplay = 2131165193;
-			
-			// aapt resource value: 0x7f070008
-			public const int endtimeText = 2131165192;
-			
-			// aapt resource value: 0x7f07000d
-			public const int floorPlanButton = 2131165197;
-			
-			// aapt resource value: 0x7f07001a
-			public const int floorplan = 2131165210;
-			
-			// aapt resource value: 0x7f070017
-			public const int headcount = 2131165207;
-			
-			// aapt resource value: 0x7f07000c
-			public const int headcountSpinner = 2131165196;
-			
-			// aapt resource value: 0x7f07000b
-			public const int headcountText = 2131165195;
-			
-			// aapt resource value: 0x7f070016
-			public const int headcountView = 2131165206;
-			
-			// aapt resource value: 0x7f070021
-			public const int name = 2131165217;
-			
-			// aapt resource value: 0x7f07001c
-			public const int nextButton = 2131165212;
-			
-			// aapt resource value: 0x7f070024
-			public const int phone = 2131165220;
-			
-			// aapt resource value: 0x7f070004
-			public const int pickDateButton = 2131165188;
-			
-			// aapt resource value: 0x7f070007
-			public const int pickTimeButton = 2131165191;
-			
-			// aapt resource value: 0x7f07000a
-			public const int pickendtimeButton = 2131165194;
-			
-			// aapt resource value: 0x7f070020
-			public const int position = 2131165216;
-			
-			// aapt resource value: 0x7f07001f
-			public const int positionView = 2131165215;
+			public const int List = 2131165204;
 			
 			// aapt resource value: 0x7f070000
-			public const int scroll = 2131165184;
+			public const int andymenu = 2131165184;
 			
-			// aapt resource value: 0x7f07000f
-			public const int searchButton = 2131165199;
+			// aapt resource value: 0x7f070016
+			public const int bbqmenu = 2131165206;
 			
-			// aapt resource value: 0x7f070010
-			public const int selectrest = 2131165200;
+			// aapt resource value: 0x7f07001b
+			public const int bookEnd = 2131165211;
 			
-			// aapt resource value: 0x7f070018
-			public const int tableNum = 2131165208;
-			
-			// aapt resource value: 0x7f07001e
-			public const int tablenum = 2131165214;
+			// aapt resource value: 0x7f07001a
+			public const int bookEndView = 2131165210;
 			
 			// aapt resource value: 0x7f070019
-			public const int tablenumSpinner = 2131165209;
+			public const int bookStart = 2131165209;
 			
-			// aapt resource value: 0x7f07001d
-			public const int tablenumView = 2131165213;
+			// aapt resource value: 0x7f070018
+			public const int bookStartView = 2131165208;
 			
-			// aapt resource value: 0x7f070006
-			public const int timeDisplay = 2131165190;
+			// aapt resource value: 0x7f070003
+			public const int coffeeshopmenu = 2131165187;
+			
+			// aapt resource value: 0x7f070032
+			public const int confirmButton = 2131165234;
+			
+			// aapt resource value: 0x7f070002
+			public const int container = 2131165186;
 			
 			// aapt resource value: 0x7f070005
-			public const int timeText = 2131165189;
+			public const int dateDisplay = 2131165189;
+			
+			// aapt resource value: 0x7f070004
+			public const int dateText = 2131165188;
+			
+			// aapt resource value: 0x7f070010
+			public const int demoImageView = 2131165200;
+			
+			// aapt resource value: 0x7f070031
+			public const int editEmail = 2131165233;
+			
+			// aapt resource value: 0x7f07002b
+			public const int editName = 2131165227;
+			
+			// aapt resource value: 0x7f07002e
+			public const int editPhone = 2131165230;
+			
+			// aapt resource value: 0x7f070030
+			public const int editemailView = 2131165232;
+			
+			// aapt resource value: 0x7f07002a
+			public const int editnameView = 2131165226;
+			
+			// aapt resource value: 0x7f07002d
+			public const int editphoneView = 2131165229;
+			
+			// aapt resource value: 0x7f07002f
+			public const int email = 2131165231;
+			
+			// aapt resource value: 0x7f07000b
+			public const int endtimeDisplay = 2131165195;
+			
+			// aapt resource value: 0x7f07000a
+			public const int endtimeText = 2131165194;
+			
+			// aapt resource value: 0x7f07000f
+			public const int floorPlanButton = 2131165199;
+			
+			// aapt resource value: 0x7f070020
+			public const int floorplan = 2131165216;
+			
+			// aapt resource value: 0x7f070017
+			public const int gardenmenu = 2131165207;
+			
+			// aapt resource value: 0x7f070012
+			public const int hansellsmenu = 2131165202;
+			
+			// aapt resource value: 0x7f07001d
+			public const int headcount = 2131165213;
+			
+			// aapt resource value: 0x7f07000e
+			public const int headcountSpinner = 2131165198;
+			
+			// aapt resource value: 0x7f07000d
+			public const int headcountText = 2131165197;
+			
+			// aapt resource value: 0x7f07001c
+			public const int headcountView = 2131165212;
+			
+			// aapt resource value: 0x7f070024
+			public const int image = 2131165220;
+			
+			// aapt resource value: 0x7f070015
+			public const int maplemenu = 2131165205;
+			
+			// aapt resource value: 0x7f070021
+			public const int menuButton = 2131165217;
+			
+			// aapt resource value: 0x7f070029
+			public const int name = 2131165225;
+			
+			// aapt resource value: 0x7f070022
+			public const int nextButton = 2131165218;
+			
+			// aapt resource value: 0x7f07002c
+			public const int phone = 2131165228;
+			
+			// aapt resource value: 0x7f070006
+			public const int pickDateButton = 2131165190;
+			
+			// aapt resource value: 0x7f070009
+			public const int pickTimeButton = 2131165193;
+			
+			// aapt resource value: 0x7f07000c
+			public const int pickendtimeButton = 2131165196;
+			
+			// aapt resource value: 0x7f070028
+			public const int position = 2131165224;
+			
+			// aapt resource value: 0x7f070001
+			public const int scroll = 2131165185;
+			
+			// aapt resource value: 0x7f070011
+			public const int searchButton = 2131165201;
+			
+			// aapt resource value: 0x7f070013
+			public const int selectrest = 2131165203;
+			
+			// aapt resource value: 0x7f07001e
+			public const int tableNum = 2131165214;
+			
+			// aapt resource value: 0x7f070027
+			public const int tablenum = 2131165223;
+			
+			// aapt resource value: 0x7f07001f
+			public const int tablenumSpinner = 2131165215;
+			
+			// aapt resource value: 0x7f070026
+			public const int tablenumView = 2131165222;
+			
+			// aapt resource value: 0x7f070025
+			public const int text = 2131165221;
+			
+			// aapt resource value: 0x7f070008
+			public const int timeDisplay = 2131165192;
+			
+			// aapt resource value: 0x7f070007
+			public const int timeText = 2131165191;
+			
+			// aapt resource value: 0x7f070023
+			public const int toast_layout_root = 2131165219;
 			
 			static Id()
 			{
@@ -249,16 +285,37 @@ namespace RestaurantReservation
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Details = 2130903040;
+			public const int andysteakhouse = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int coffeeshop = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Search = 2130903042;
+			public const int Details = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int UserDetails = 2130903043;
+			public const int hansells = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int Main = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int maple = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int restaurantbbq = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int restaurantgarden = 2130903047;
+			
+			// aapt resource value: 0x7f030008
+			public const int Search = 2130903048;
+			
+			// aapt resource value: 0x7f030009
+			public const int toast_layout = 2130903049;
+			
+			// aapt resource value: 0x7f03000a
+			public const int UserDetails = 2130903050;
 			
 			static Layout()
 			{
@@ -295,17 +352,20 @@ namespace RestaurantReservation
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f060003
-			public const int Display_text = 2131099651;
-			
-			// aapt resource value: 0x7f060001
-			public const int Mono_Android_Theme_Splash = 2131099649;
+			// aapt resource value: 0x7f060004
+			public const int Display_text = 2131099652;
 			
 			// aapt resource value: 0x7f060002
-			public const int Textview_text = 2131099650;
+			public const int Mono_Android_Theme_Splash = 2131099650;
+			
+			// aapt resource value: 0x7f060003
+			public const int Textview_text = 2131099651;
 			
 			// aapt resource value: 0x7f060000
 			public const int button_text = 2131099648;
+			
+			// aapt resource value: 0x7f060001
+			public const int listbackground = 2131099649;
 			
 			static Style()
 			{

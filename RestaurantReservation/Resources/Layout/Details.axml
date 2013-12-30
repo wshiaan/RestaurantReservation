@@ -79,7 +79,7 @@
             <Spinner
                 android:id="@+id/headcountSpinner"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="25px"
                 android:prompt="@string/headcount"
                 style="@style/Display_text"
                 android:background="#E68A00"

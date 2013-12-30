@@ -9,7 +9,11 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+
+
+
 using RestaurantReservation.WebService;
+
 
 namespace RestaurantReservation
 {
@@ -27,13 +31,11 @@ namespace RestaurantReservation
         private TextView endtime_display;
         private Button pick_button;
         private Button pickendtime_button;
-
+        private Context mContext;
         private int hour;
         private int minute;
         private int endhour;
         private int endminute;
-
-
 
         private string headcount;
         const int TIME_DIALOG_ID = 1;
@@ -55,7 +57,14 @@ namespace RestaurantReservation
 
             pickDate.Click += (sender, e) =>
             {
-                ShowDialog(DATE_DIALOG_ID);
+                try
+                {
+                    ShowDialog(DATE_DIALOG_ID);
+                }
+                catch (Exception ex)
+                {
+                }
+
 
             };
 
@@ -91,57 +100,57 @@ namespace RestaurantReservation
             //Floorplan Buttom
             var floorPlan = FindViewById(Resource.Id.floorPlanButton);
             floorPlan.Click += (sender, e) =>
+            {
+                switch (resid)
                 {
-                    switch (resid)
-                    {
-                        case 1:
-                            {
-                               // var coffeeshop = new Intent(this, typeof(CoffeeShop));
-                              //  StartActivity(coffeeshop);
-                                var imageView =
-                                FindViewById<ImageView>(Resource.Id.demoImageView);
-                                imageView.SetImageResource(Resource.Drawable.coffeeshop);
-                                return;
-                            }
-                        case 2:
-                            {
-                                var imageView =
-                               FindViewById<ImageView>(Resource.Id.demoImageView);
-                                imageView.SetImageResource(Resource.Drawable.HansellsKitchen2);
-                                return;
-                            }
-                        case 3:
-                            {
-                                var imageView =
-                               FindViewById<ImageView>(Resource.Id.demoImageView);
-                                imageView.SetImageResource(Resource.Drawable.AndySteakHouse);
-                                return;
-                            }
-                        case 4:
-                            {
-                                var imageView =
-                               FindViewById<ImageView>(Resource.Id.demoImageView);
-                                imageView.SetImageResource(Resource.Drawable.MaplePalace);
-                                return;
-                            }
-                        case 5:
-                            {
-                                var imageView =
-                               FindViewById<ImageView>(Resource.Id.demoImageView);
-                                imageView.SetImageResource(Resource.Drawable.RestaurantGarden);
-                                return;
-                            }
-                        case 6:
-                            {
-                                var imageView =
-                                FindViewById<ImageView>(Resource.Id.demoImageView);
-                                imageView.SetImageResource(Resource.Drawable.OsakaSushi);
-                                return;
+                    case 1:
+                        {
+                            // var coffeeshop = new Intent(this, typeof(CoffeeShop));
+                            //  StartActivity(coffeeshop);
+                            var imageView =
+                            FindViewById<ImageView>(Resource.Id.demoImageView);
+                            imageView.SetImageResource(Resource.Drawable.coffeeshop);
+                            return;
+                        }
+                    case 2:
+                        {
+                            var imageView =
+                           FindViewById<ImageView>(Resource.Id.demoImageView);
+                            imageView.SetImageResource(Resource.Drawable.HansellsKitchen2);
+                            return;
+                        }
+                    case 3:
+                        {
+                            var imageView =
+                           FindViewById<ImageView>(Resource.Id.demoImageView);
+                            imageView.SetImageResource(Resource.Drawable.AndySteakHouse);
+                            return;
+                        }
+                    case 4:
+                        {
+                            var imageView =
+                           FindViewById<ImageView>(Resource.Id.demoImageView);
+                            imageView.SetImageResource(Resource.Drawable.MaplePalace);
+                            return;
+                        }
+                    case 5:
+                        {
+                            var imageView =
+                           FindViewById<ImageView>(Resource.Id.demoImageView);
+                            imageView.SetImageResource(Resource.Drawable.RestaurantGarden);
+                            return;
+                        }
+                    case 6:
+                        {
+                            var imageView =
+                            FindViewById<ImageView>(Resource.Id.demoImageView);
+                            imageView.SetImageResource(Resource.Drawable.OsakaSushi);
+                            return;
 
-                            }
+                        }
 
-                    }
-                };
+                }
+            };
             //Search Button
             var search = FindViewById(Resource.Id.searchButton);
 
@@ -156,13 +165,11 @@ namespace RestaurantReservation
                 searchPage.PutExtra("bookend", end);
                 searchPage.PutExtra("resid", resid.ToString());
 
-                string bookstart = Convert.ToDateTime(start).ToString("MM/dd/yyyy hh:MM:ss");
-                string bookend = Convert.ToDateTime(end).ToString("MM/dd/yyyy hh:MM:ss");
                 int hcount = Convert.ToInt32(headcount);
-                bool IsWorkingTime = reservationWebService.CheckTime(resid, Convert.ToDateTime(bookstart), Convert.ToDateTime(bookend));
+                bool IsWorkingTime = reservationWebService.CheckTime(resid, Convert.ToDateTime(start), Convert.ToDateTime(end));
                 if (IsWorkingTime)
                 {
-                    List<TableNo> tablenum = reservationWebService.GetTableNo(resid, bookstart, bookend, hcount);
+                    List<TableNo> tablenum = reservationWebService.GetTableNo(resid, start, end, hcount);
                     IList<string> tablenumList = tablenum.Select(tableno => tableno.Tableid + "|" + tableno.TableNum).ToList();
                     searchPage.PutStringArrayListExtra("tableno", tablenumList);
 
@@ -170,10 +177,10 @@ namespace RestaurantReservation
                 }
                 else
                 {
-                    string toast = string.Format("The booking time is not within working hour. Please reselect the booking time.");
-                    Toast.MakeText(this, toast, ToastLength.Long).Show();
+                    string errormsg = string.Format("The booking time is not within working hour. Please reselect the booking time.");
+                    //Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                    CommonMethod.displayToast(ApplicationContext, errormsg);
                 }
-
 
             };
         }
@@ -261,7 +268,6 @@ namespace RestaurantReservation
             // string toast = string.Format("The planet is {0}", spinner.GetItemAtPosition(e.Position));
             // Toast.MakeText(this, toast, ToastLength.Long).Show();
         }
-
 
 
     }

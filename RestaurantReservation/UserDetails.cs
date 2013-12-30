@@ -70,18 +70,6 @@ namespace RestaurantReservation
             //Confirm button, enter the details into database
             var confirmButton = FindViewById(Resource.Id.confirmButton);
 
-            //Back button, link back to Search page
-            var backButton = FindViewById(Resource.Id.backButton);
-
-
-
-
-            backButton.Click += (sender, e) =>
-            {
-                var search = new Intent(this, typeof(Search));
-                StartActivity(search);
-
-            };
 
             confirmButton.Click += (sender, e) =>
             {
@@ -90,7 +78,8 @@ namespace RestaurantReservation
                     reservationWebService.InsertDetails(editName.Text, editPhone.Text, editEmail.Text, bookStart.Text, bookEnd.Text, Convert.ToInt32(headcount.Text));
                     reservationWebService.InsertBooking(tableid, DateTime.Now, "booked");
                     string toast = string.Format("Table Reserved.");
-                    Toast.MakeText(this, toast, ToastLength.Long).Show();
+                    // Toast.MakeText(this, toast, ToastLength.Long).Show();
+                    CommonMethod.displayToast(ApplicationContext, toast);
                 }
 
             };
@@ -115,48 +104,7 @@ namespace RestaurantReservation
                 editemailView.Text = e.Text.ToString();
             };
         }
-        /*
-             private bool CheckNullOrEmpty(string editName,string editPhone,string editEmail)
-             {
-           
-                if (string.IsNullOrEmpty(editName))
-                {
-                    error = 1;
-                    errormsg = " Name is required.";
 
-
-                }
-                else if (string.IsNullOrEmpty(editPhone))
-                {
-                    error = 2;
-                    errormsg = " Phone number is required.";
-
-                }
-                else if (string.IsNullOrEmpty(editEmail))
-                {
-                    error = 3;
-                    errormsg = " Email is required.";
-                }
-
-                else
-                {
-                    error = 0;
-                }
-
-                switch (error)
-                {
-                    case 0: return false;
-
-                    default:
-                        {
-                            Toast.MakeText(this, errormsg, ToastLength.Long).Show();
-                            return true;
-                        }
-                }
-
-                
-             }
-         */
         private bool CheckName(string name)
         {
             if (!string.IsNullOrEmpty(name))
@@ -171,7 +119,8 @@ namespace RestaurantReservation
                     if (!namematch.Success || name.StartsWith(" ") || name.EndsWith(" "))
                     {
                         errormsg = string.Format("Invalid name. Note: Special character is not accepted. Name starts with or ends with space is not allowed.");
-                        Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                        // Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                        CommonMethod.displayToast(ApplicationContext, errormsg);
                         return false;
                     }
 
@@ -180,7 +129,8 @@ namespace RestaurantReservation
             else
             {
                 errormsg = "Please enter name.";
-                Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                //Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                CommonMethod.displayToast(ApplicationContext, errormsg);
                 return false;
             }
             return true;
@@ -198,19 +148,22 @@ namespace RestaurantReservation
                 if (!endwithmatch.Success || email.EndsWith(" ") || email.StartsWith(" "))
                 {
                     errormsg = "Invalid email.";
-                    Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                    //Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                    CommonMethod.displayToast(ApplicationContext, errormsg);
                     return false;
                 }
                 else if (email.IndexOf("@") == -1)
                 {
                     errormsg = "Email must have a '@' character.";
-                    Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                    //Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                    CommonMethod.displayToast(ApplicationContext, errormsg);
                     return false;
                 }
                 else if (email.IndexOf(".") == -1)
                 {
                     errormsg = "Email must have at least one '.' ";
-                    Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                    //Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                    CommonMethod.displayToast(ApplicationContext, errormsg);
                     return false;
                 }
             }
@@ -218,7 +171,8 @@ namespace RestaurantReservation
             else
             {
                 errormsg = "Please enter email.";
-                Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                //Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                CommonMethod.displayToast(ApplicationContext, errormsg);
                 return false;
             }
 
@@ -240,7 +194,8 @@ namespace RestaurantReservation
                 if (!phonematch.Success || phone.StartsWith(" ") || phone.EndsWith(" "))
                 {
                     errormsg = string.Format("Invalid phone number.");
-                    Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                    // Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                    CommonMethod.displayToast(ApplicationContext, errormsg);
                     return false;
                 }
 
@@ -249,7 +204,8 @@ namespace RestaurantReservation
             else
             {
                 errormsg = "Please enter phone number.";
-                Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                // Toast.MakeText(this, errormsg, ToastLength.Long).Show();
+                CommonMethod.displayToast(ApplicationContext, errormsg);
                 return false;
             }
             return true;
